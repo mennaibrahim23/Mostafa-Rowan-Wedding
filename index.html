@@ -1,315 +1,256 @@
-<!-- Falling Rose Petals -->
-<div id="petals-container"></div>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
 
-<!-- Music Control -->
-<button id="musicToggle" class="music-btn" aria-label="Toggle Music">
-    <i class="fas fa-music"></i>
-</button>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<audio id="bgMusic" loop>
-    <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
-</audio>
+    <title>Mostafa & Rowan | Wedding Invitation</title>
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<!-- Opening Envelope Screen -->
-<div id="envelope-screen">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:wght@300;400;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <div class="envelope-wrapper" id="openEnvelope">
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-        <div class="envelope">
+    <link rel="stylesheet" href="style.css">
 
-            <div class="front flap"></div>
+</head>
 
-            <div class="front pocket"></div>
+<body>
 
+    <!-- Floating Petals -->
+    <div id="petals-container"></div>
 
-            <div class="letter">
+    <!-- Music Button -->
+    <button id="musicToggle" class="music-btn" aria-label="Toggle Music">
+        <i class="fas fa-music"></i>
+    </button>
 
-                <div class="mini-monogram">
-                    M & R
+    <audio id="bgMusic" loop>
+        <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Envelope Screen -->
+
+    <div id="envelope-screen">
+
+        <div class="envelope-wrapper" id="openEnvelope">
+
+            <div class="envelope">
+
+                <div class="front flap"></div>
+
+                <div class="front pocket"></div>
+
+                <div class="letter">
+
+                    <div class="mini-monogram">
+                        M & R
+                    </div>
+
+                    <h2>Wedding Invitation</h2>
+
+                    <p>
+                        Together with their families
+                        <br><br>
+
+                        <strong>
+                            Mostafa & Rowan
+                        </strong>
+
+                        <br><br>
+
+                        request the pleasure of your company
+                        as they celebrate their wedding.
+                    </p>
+
                 </div>
 
-                <p>
-                    You are invited!
-                </p>
+                <div class="wax-seal">
+                    <span>M&R</span>
+                </div>
 
             </div>
 
+            <p class="click-hint">
 
-            <div class="wax-seal">
-                <span>
-                    M&R
-                </span>
-            </div>
+                Click to Open the Invitation ✨
 
+            </p>
 
         </div>
 
-
-        <p class="click-hint">
-            Click to open the invitation 💌
-        </p>
-
-
     </div>
 
-</div>
+    <!-- Main Content -->
 
+    <main id="main-content" class="hidden">
 
+        <!-- HERO -->
 
+        <section class="hero">
 
+            <div class="hero-content fade-in">
 
-<!-- Main Invitation Content -->
+                <div class="monogram">
 
-<main id="main-content" class="hidden">
+                    <span>M</span>
 
+                    <span>&</span>
 
+                    <span>R</span>
 
-<!-- HERO SECTION -->
+                </div>
 
-<section class="hero">
+                <h1>
 
-<div class="hero-content fade-in">
+                    Mostafa
 
+                    <span class="and">&</span>
 
-<div class="monogram">
+                    Rowan
 
-<span>M</span>
-<span>&</span>
-<span>R</span>
+                </h1>
 
-</div>
+                <p class="subtitle">
 
+                    Together with their families
 
+                    <br>
 
-<h1>
-Mostafa 
-<span class="and">
-&
-</span>
-Rowan
-</h1>
+                    request the pleasure of your company
 
+                    <br>
 
+                    as they celebrate their wedding.
 
-<p class="subtitle">
-Together with their families, they request the pleasure of your company as they celebrate their wedding day
-</p>
+                </p>
 
+                <div class="couple-photo-frame fade-in">
 
+                    <img src="couple.jpg"
+                         alt="Mostafa & Rowan"
+                         id="coupleImg"
+                         onerror="this.src='https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80'">
 
+                </div>
 
-<div class="couple-photo-frame fade-in">
+                <div class="date">
 
-<img 
-src="couple.jpg"
-alt="Mostafa & Rowan"
-id="coupleImg">
+                    Sunday, September 6, 2026
 
-</div>
+                </div>
 
+            </div>
 
+        </section>
+        <!-- COUNTDOWN -->
 
+        <section class="countdown-section fade-in">
 
-<div class="date">
+            <h2>Countdown to Our Big Day</h2>
 
-Sunday, September 6th 2026
+            <div class="countdown-container">
 
-</div>
+                <div class="time-box">
+                    <span id="days">00</span>
+                    <small>Days</small>
+                </div>
 
+                <div class="time-box">
+                    <span id="hours">00</span>
+                    <small>Hours</small>
+                </div>
 
+                <div class="time-box">
+                    <span id="minutes">00</span>
+                    <small>Minutes</small>
+                </div>
 
-</div>
+                <div class="time-box">
+                    <span id="seconds">00</span>
+                    <small>Seconds</small>
+                </div>
 
-</section>
+            </div>
 
+        </section>
 
+        <!-- DETAILS -->
 
+        <section id="details" class="details-section">
 
+            <div class="container">
 
+                <!-- Venue -->
 
+                <div class="card fade-in">
 
-<!-- COUNTDOWN SECTION -->
+                    <i class="fas fa-map-marker-alt location-icon"></i>
 
-<section class="countdown-section fade-in">
+                    <h3>Wedding Venue</h3>
 
+                    <p>
+                        <strong>Villa Chèrif</strong>
+                    </p>
 
-<h2>
-Counting Down To The Big Day ⏳
-</h2>
+                    <p>
+                        King Mariout, Alexandria
+                    </p>
 
+                    <a href="https://maps.google.com/?q=Villa+Cherif+King+Marriout"
+                       target="_blank"
+                       class="btn-location">
 
+                        <i class="fas fa-location-dot"></i>
 
-<div class="countdown-container">
+                        View Location
 
+                    </a>
 
-<div class="time-box">
+                </div>
 
-<span id="days">
-00
-</span>
+                <!-- RSVP -->
 
-<small>
-Days
-</small>
+                <div class="card fade-in">
 
-</div>
+                    <i class="fas fa-calendar-check rsvp-icon"></i>
 
+                    <h3>RSVP</h3>
 
+                    <p>
 
+                        We would be delighted to celebrate
 
-<div class="time-box">
+                        this special day with you.
 
-<span id="hours">
-00
-</span>
+                    </p>
 
-<small>
-Hours
-</small>
+                    <a href="https://wa.me/201000000000?text=Congratulations%20Mostafa%20%26%20Rowan!%20I%20would%20love%20to%20attend."
+                       target="_blank"
+                       class="btn-rsvp">
 
-</div>
+                        Confirm Attendance
 
+                    </a>
 
+                </div>
 
+            </div>
 
-<div class="time-box">
+        </section>
 
-<span id="minutes">
-00
-</span>
+    </main>
 
-<small>
-Minutes
-</small>
+    <script src="script.js"></script>
 
-</div>
+</body>
 
-
-
-
-<div class="time-box">
-
-<span id="seconds">
-00
-</span>
-
-<small>
-Seconds
-</small>
-
-</div>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-<!-- DETAILS SECTION -->
-
-<section id="details" class="details-section">
-
-
-<div class="container">
-
-
-
-<div class="card fade-in">
-
-
-<i class="fas fa-map-marker-alt location-icon"></i>
-
-
-<h3>
-Wedding Venue 📍
-</h3>
-
-
-<p>
-<strong>
-Villa Chèrif
-</strong>
-</p>
-
-
-<p>
-King Mariout - Alexandria
-</p>
-
-
-
-<a href="https://maps.google.com/?q=Villa+Cherif+King+Marriout"
-target="_blank"
-class="btn-location">
-
-
-<i class="fas fa-directions"></i>
-
-Open Location
-
-</a>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="card fade-in">
-
-
-<i class="fas fa-calendar-check rsvp-icon"></i>
-
-
-<h3>
-RSVP 💌
-</h3>
-
-
-
-<p>
-We would be delighted to celebrate this special day with you.
-</p>
-
-
-
-<a href="https://wa.me/201000000000"
-target="_blank"
-class="btn-rsvp">
-
-Confirm Attendance via WhatsApp
-
-</a>
-
-
-</div>
-
-
-
-
-</div>
-
-
-</section>
-
-
-
-</main>
-
-
-
-<script src="script.js"></script>
+</html>
