@@ -1,97 +1,315 @@
-<!DOCTYPE html> 
-<html lang="en">
+<!-- Falling Rose Petals -->
+<div id="petals-container"></div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mostafa & Rowan</title>
 
-    <link rel="stylesheet" href="style.css">
+<!-- Music Control -->
+<button id="musicToggle" class="music-btn" aria-label="Toggle Music">
+    <i class="fas fa-music"></i>
+</button>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-</head>
+<audio id="bgMusic" loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
+</audio>
 
-<body>
 
-    <div id="loader">
-        <h1>M<span>&</span>R</h1>
+
+<!-- Opening Envelope Screen -->
+<div id="envelope-screen">
+
+    <div class="envelope-wrapper" id="openEnvelope">
+
+        <div class="envelope">
+
+            <div class="front flap"></div>
+
+            <div class="front pocket"></div>
+
+
+            <div class="letter">
+
+                <div class="mini-monogram">
+                    M & R
+                </div>
+
+                <p>
+                    You are invited!
+                </p>
+
+            </div>
+
+
+            <div class="wax-seal">
+                <span>
+                    M&R
+                </span>
+            </div>
+
+
+        </div>
+
+
+        <p class="click-hint">
+            Click to open the invitation 💌
+        </p>
+
+
     </div>
 
-    <section class="hero">
-        <div class="hero-content">
-            <div class="monogram">
-                M <span>&</span> R
-            </div>
+</div>
 
-            <h1>
-                Mostafa Hendawy
-                <span class="and">&</span>
-                Rowan Katamsh
-            </h1>
 
-            <p class="subtitle">
-                Together with our families<br>
-                We request the pleasure of your company<br>
-                as we celebrate our wedding.
-            </p>
 
-            <div class="date">
-                06 September 2026
-            </div>
 
-            <button id="openInvitation">
-                Open Invitation
-            </button>
-        </div>
-    </section>
 
-    <section id="invitation">
-        <div class="container">
-            <h2>Wedding Details</h2>
+<!-- Main Invitation Content -->
 
-            <div class="card">
-                <h3>Date</h3>
-                <p>
-                    Sunday<br>
-                    06 September 2026
-                </p>
-            </div>
+<main id="main-content" class="hidden">
 
-            <div class="card">
-                <h3>Time</h3>
-                <p>6:00 PM</p>
-            </div>
 
-            <div class="card">
-                <h3>Venue</h3>
-                <p>
-                    Villa Chèrif<br><br>
-                    King Marriout<br><br>
-                    Alexandria
-                </p>
-                <a href="https://maps.app.goo.gl/9N3fS3" target="_blank">
-                    View Location
-                </a>
-            </div>
 
-            <div class="card">
-                <h3>Countdown</h3>
-                <p id="countdown">Loading...</p>
-            </div>
+<!-- HERO SECTION -->
 
-            <div class="card">
-                <h3>Our Story</h3>
-                <p>
-                    "And above all these put on love."<br><br>
-                    We can't wait to celebrate with you.
-                </p>
-            </div>
-        </div>
-    </section>
+<section class="hero">
 
-    <script src="script.js"></script>
-</body>
-</html>
+<div class="hero-content fade-in">
+
+
+<div class="monogram">
+
+<span>M</span>
+<span>&</span>
+<span>R</span>
+
+</div>
+
+
+
+<h1>
+Mostafa 
+<span class="and">
+&
+</span>
+Rowan
+</h1>
+
+
+
+<p class="subtitle">
+Together with their families, they request the pleasure of your company as they celebrate their wedding day
+</p>
+
+
+
+
+<div class="couple-photo-frame fade-in">
+
+<img 
+src="couple.jpg"
+alt="Mostafa & Rowan"
+id="coupleImg">
+
+</div>
+
+
+
+
+<div class="date">
+
+Sunday, September 6th 2026
+
+</div>
+
+
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+<!-- COUNTDOWN SECTION -->
+
+<section class="countdown-section fade-in">
+
+
+<h2>
+Counting Down To The Big Day ⏳
+</h2>
+
+
+
+<div class="countdown-container">
+
+
+<div class="time-box">
+
+<span id="days">
+00
+</span>
+
+<small>
+Days
+</small>
+
+</div>
+
+
+
+
+<div class="time-box">
+
+<span id="hours">
+00
+</span>
+
+<small>
+Hours
+</small>
+
+</div>
+
+
+
+
+<div class="time-box">
+
+<span id="minutes">
+00
+</span>
+
+<small>
+Minutes
+</small>
+
+</div>
+
+
+
+
+<div class="time-box">
+
+<span id="seconds">
+00
+</span>
+
+<small>
+Seconds
+</small>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- DETAILS SECTION -->
+
+<section id="details" class="details-section">
+
+
+<div class="container">
+
+
+
+<div class="card fade-in">
+
+
+<i class="fas fa-map-marker-alt location-icon"></i>
+
+
+<h3>
+Wedding Venue 📍
+</h3>
+
+
+<p>
+<strong>
+Villa Chèrif
+</strong>
+</p>
+
+
+<p>
+King Mariout - Alexandria
+</p>
+
+
+
+<a href="https://maps.google.com/?q=Villa+Cherif+King+Marriout"
+target="_blank"
+class="btn-location">
+
+
+<i class="fas fa-directions"></i>
+
+Open Location
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card fade-in">
+
+
+<i class="fas fa-calendar-check rsvp-icon"></i>
+
+
+<h3>
+RSVP 💌
+</h3>
+
+
+
+<p>
+We would be delighted to celebrate this special day with you.
+</p>
+
+
+
+<a href="https://wa.me/201000000000"
+target="_blank"
+class="btn-rsvp">
+
+Confirm Attendance via WhatsApp
+
+</a>
+
+
+</div>
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+</main>
+
+
+
+<script src="script.js"></script>
